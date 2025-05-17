@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kelime İşlemci</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolBar" name="toolBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <addaction name="actionBold"/>
+      <addaction name="actionItalic"/>
+      <addaction name="actionUnderline"/>
+      <addaction name="separator"/>
+      <addaction name="actionAlignLeft"/>
+      <addaction name="actionAlignCenter"/>
+      <addaction name="actionAlignRight"/>
+      <addaction name="actionAlignJustify"/>
+      <addaction name="separator"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="fontComboBox"/>
+    </item>
+    <item>
+     <widget class="QComboBox" name="fontSizeComboBox"/>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDosya">
+    <property name="title">
+     <string>Dosya</string>
+    </property>
+    <addaction name="actionYeni"/>
+    <addaction name="actionAc"/>
+    <addaction name="actionKaydet"/>
+    <addaction name="actionFarkliKaydet"/>
+    <addaction name="separator"/>
+    <addaction name="actionCikis"/>
+   </widget>
+   <widget class="QMenu" name="menuDuzenle">
+    <property name="title">
+     <string>Düzenle</string>
+    </property>
+    <addaction name="actionKes"/>
+    <addaction name="actionKopyala"/>
+    <addaction name="actionYapistir"/>
+   </widget>
+   <widget class="QMenu" name="menuBicim">
+    <property name="title">
+     <string>Biçim</string>
+    </property>
+    <addaction name="actionBold"/>
+    <addaction name="actionItalic"/>
+    <addaction name="actionUnderline"/>
+   </widget>
+   <addaction name="menuDosya"/>
+   <addaction name="menuDuzenle"/>
+   <addaction name="menuBicim"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionYeni">
+   <property name="text">
+    <string>Yeni</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionAc">
+   <property name="text">
+    <string>Aç</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionKaydet">
+   <property name="text">
+    <string>Kaydet</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionFarkliKaydet">
+   <property name="text">
+    <string>Farklı Kaydet</string>
+   </property>
+  </action>
+  <action name="actionCikis">
+   <property name="text">
+    <string>Çıkış</string>
+   </property>
+  </action>
+  <action name="actionKes">
+   <property name="text">
+    <string>Kes</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionKopyala">
+   <property name="text">
+    <string>Kopyala</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionYapistir">
+   <property name="text">
+    <string>Yapıştır</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Kalın</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>İtalik</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Altı Çizili</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionAlignLeft">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Sola Hizala</string>
+   </property>
+  </action>
+  <action name="actionAlignCenter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ortala</string>
+   </property>
+  </action>
+  <action name="actionAlignRight">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Sağa Hizala</string>
+   </property>
+  </action>
+  <action name="actionAlignJustify">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>İki Yana Yasla</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui> 
